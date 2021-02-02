@@ -3,23 +3,49 @@
 
 
 def is_even_len(string: str) -> bool:
-    pass
+    if len(string) % 2 == 0:
+        return True
+    return False
 
 
 def remove_third_char(string: str) -> str:
-    pass
+    return string[:2]+string[3:]
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    for i in range(len(string)):
+        if string[i] == old_char:
+            string = string[:i] + new_char + string[i+1:] # Pour changer tous les old_char dans le string
+    return string
+
 
 
 def get_number_of_char(string: str, char: str) -> int:
-    pass
+    occurence = 0 # Ne fonctionne pas avec None
+    for i in string:
+        if i == char:
+            occurence += 1
+    return occurence
+
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
+    occurence = 0
+    sentence = sentence.split() # Permet de separer une chaine de charactere ou espace
+    for i in sentence:
+        if i == word:
+            occurence += 1
+    return occurence
+
+# Sans utiliser la fct. split()
+"""
+nb_of_word = 0
+for w in range(len(sentence)):
+    if sentence[w : w + len(word)] == word:
+    nb_of_word +=1
+"""
+
+
 
 
 def main() -> None:
