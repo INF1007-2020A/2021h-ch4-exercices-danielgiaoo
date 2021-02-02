@@ -40,9 +40,9 @@ def get_number_of_words(sentence: str, word: str) -> int:
 # Sans utiliser la fct. split()
 """
 nb_of_word = 0
-for w in range(len(sentence)):
-    if sentence[w : w + len(word)] == word:
-    nb_of_word +=1
+for i in range(len(sentence)):
+    if sentence[i : i + len(word)] == word:
+    nb_of_word += 1
 """
 
 
